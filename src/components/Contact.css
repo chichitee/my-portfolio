@@ -1,0 +1,124 @@
+.contact-section {
+  background-color: #f3e5f5; /* Light lilac */
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+  animation: fadeIn 1s ease-in-out; /* Fade-in animation */
+}
+
+.contact-section h2 {
+  font-size: 2.5rem;
+  color: #ba68c8; /* Soft lilac */
+  text-align: center;
+  margin-bottom: 20px;
+  letter-spacing: 2px; /* Professional spacing */
+  animation: popIn 0.8s ease-in-out;
+}
+
+.contact-section p {
+  font-size: 1.1rem;
+  color: #7b1fa2; /* Medium lilac */
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.contact-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 600px;
+  margin: 30px auto 0;
+}
+
+.contact-section input,
+.contact-section textarea {
+  padding: 15px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 10px; /* Rounded for a soft look */
+  background-color: #ffffff;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-section input:focus,
+.contact-section textarea:focus {
+  border-color: #ba68c8; /* Soft lilac border on focus */
+  box-shadow: 0 0 8px rgba(186, 104, 200, 0.2); /* Soft lilac shadow on focus */
+  outline: none; /* Remove default outline */
+}
+
+.contact-section button {
+  background-color: #ba68c8; /* Soft lilac button */
+  color: white;
+  padding: 15px 30px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-section button:hover {
+  background-color: #d81b60; /* Accent pink on hover */
+  transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+.contact-section button:before {
+  content: "📧"; /* Cute envelope icon */
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  color: white;
+  animation: moveIcon 1s infinite ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes moveIcon {
+  0%, 100% {
+    transform: translateY(-50%) rotate(0deg);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateY(-50%) rotate(15deg);
+    opacity: 1;
+  }
+}
